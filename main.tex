@@ -1,5 +1,26 @@
-\documentclass{article}
-\usepackage[utf8]{inputenc}
+\documentclass[
+  year=2018,
+  language=english,
+  imageFolder=./photos/,
+  eventsCsv = ./data/holidays.csv,
+  markDefaultsCsv = ./data/mark_defaults.csv,
+]{wallcalendar}
+
+% See the wallcalendar user manual and repository
+%
+% https://ctan.org/pkg/wallcalendar
+% https://github.com/profound-labs/wallcalendar
+
+\usepackage{local}
+
 \begin{document}
-(Type your content here.)
+
+\MonthPage[layout=full page, put photo=full page]{June}
+
+\MonthPage[layout=full page, put photo=full width above calendar]{July}
+
+\MonthPage[layout=small landscape, put photo=full width]{August}
+
+\YearPlannerPage
+
 \end{document}
