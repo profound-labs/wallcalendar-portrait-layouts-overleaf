@@ -3,38 +3,40 @@
 \setmainfont{TeX Gyre Pagella}
 \newfontfamily\dejaVuSans{DejaVu Sans}
 
-\SetPhoto[bleed=3mm, file={obscure-crop}]{June}
+% === June ===
 
-\SetQuote[xOffset=-5mm, yOffset=-20mm]{June}{%
-\raggedright
+\SetPhoto[bleed=3mm, file={obscure-crop}, yOffset=-150mm]{June}
+
+\SetQuote[yOffset=-3mm]{June}{%
+\centering
 \setlength{\parskip}{10pt}%
 \Large
-\color{white}
+\color{black!80}
 
-I shall set forth for somewhere,\\
-I shall make the reckless choice\\
-Some day when they are in voice\\
-And tossing so as to scare\\
-The white clouds over them on.\\
 I shall have less to say,\\
 But I shall be gone.
 
 \textit{The Sound of the Trees} by Robert Frost
 }
 
-\ifshowframe
-  \SetCalendar[bg/.style={opacity=0.5, fill=white}]{June}
-\else
-  \SetCalendar[bg/.style={opacity=0.8}]{June}
-\fi
+\SetCalendar[bg/.style={opacity=1}]{June}
 
 \SetEvents{June}{%
-  if (equals=2018-06-21)
-    [day text={\dejaVuSans\char"263C}];% U+263C white sun with rays
+\parseMonthMarksDayTextUsing{./data/events.csv}%
+\parseMonthMarksDayText%
+\parseMonthMarksNote%
 }{%
-\raggedleft
-{\dejaVuSans\char"263C} June 21: Summer Solstice
+\raggedright
+\parseMonthEvents[%
+  filter pred = hasNote,
+  format cmd = {
+    \textsuperscript{\eMark}~\eMonthShort~\eDay:\space%
+    \eNote\ifnumless{\eIdx}{\eMaxIdx}{,\space}{}%
+   },
+]%
 }
+
+% === July ===
 
 \SetPhoto[bleed=3mm, file={obscure-crop}]{July}
 
@@ -61,54 +63,62 @@ But I shall be gone.
 \end{tikzpicture}%
 }
 
-\ifshowframe
-  \SetCalendar[bg/.style={opacity=0.5}]{July}
-\else
-  \SetCalendar[bg/.style={opacity=1}]{July}
-\fi
+\SetCalendar[bg/.style={opacity=1}]{July}
 
-\SetEvents{July}{
-  if (equals=2018-07-27) [day text={\dejaVuSans\char"263C}];
+\SetEvents{July}{%
+\parseMonthMarksDayTextUsing{./data/events.csv}%
+\parseMonthMarksDayText%
+\parseMonthMarksNote%
 }{%
-\raggedleft
-{\dejaVuSans\char"263C} July 27: Mars at Opposition
+\raggedright
+\parseMonthEvents[%
+  filter pred = hasNote,
+  format cmd = {
+    \textsuperscript{\eMark}~\eMonthShort~\eDay:\space%
+    \eNote\ifnumless{\eIdx}{\eMaxIdx}{,\space}{}%
+   },
+]%
 }
 
-\SetPhoto[bleed=3mm, file={obscure-crop}, yOffset=-150mm]{August}
+% === August ===
 
-\SetQuote[yOffset=-3mm]{August}{%
-\centering
+\SetPhoto[bleed=3mm, file={obscure-crop}]{August}
+
+\SetQuote[xOffset=-5mm, yOffset=-20mm]{August}{%
+\raggedright
 \setlength{\parskip}{10pt}%
 \Large
-\color{black!80}
+\color{white}
 
+I shall set forth for somewhere,\\
+I shall make the reckless choice\\
+Some day when they are in voice\\
+And tossing so as to scare\\
+The white clouds over them on.\\
 I shall have less to say,\\
 But I shall be gone.
 
 \textit{The Sound of the Trees} by Robert Frost
 }
 
-\ifshowframe
-  \SetCalendar[bg/.style={opacity=0.5}]{August}
-\else
-  \SetCalendar[bg/.style={opacity=1}]{August}
-\fi
+\SetCalendar[bg/.style={opacity=0.8}]{August}
 
-\SetEvents{August}{
-  if (equals=2018-08-12) [day text={\dejaVuSans\char"263C}];
+\SetEvents{August}{%
+\parseMonthMarksDayTextUsing{./data/events.csv}%
+\parseMonthMarksDayText%
+\parseMonthMarksNote%
 }{%
-\raggedleft
-{\dejaVuSans\char"263C} August 12, 13: Perseids Meteor Shower
+\raggedright
+\parseMonthEvents[%
+  filter pred = hasNote,
+  format cmd = {
+    \textsuperscript{\eMark}~\eMonthShort~\eDay:\space%
+    \eNote\ifnumless{\eIdx}{\eMaxIdx}{,\space}{}%
+   },
+]%
 }
 
-% Use two CSV files for day text input to include the moon phases
-\renewcommand\@wall@plm[1]{%
-\luadirect{
-require("wallcalendar-helpers.lua")
-monthMarksDayText(\luastring{#1}, nil, \luastring{\plannerMarksDayTextCSV})
-monthMarksDayText(\luastring{#1}, nil, \luastring{./data/moonphases.csv})
-tex.sprint(';')
-}}
+% === Year Planner ===
 
 \newcommand\plannerYearFmt{\fontsize{26}{26}\selectfont\color{orangegold}}
 
@@ -116,6 +126,7 @@ tex.sprint(';')
 \setlength{\plannerNotesSep}{3mm}
 
 \newcommand\preYearPlannerPageHook{%
+  \renewcommand\monthMarkFmt{\fontsize{7}{7}\selectfont}%
   \setlength{\markNumberAbove}{-9pt}%
   \setlength{\markNumberRight}{-6pt}%
   \setlength{\markDayTextAbove}{-11pt}%

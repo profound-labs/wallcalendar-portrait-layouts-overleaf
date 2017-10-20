@@ -2,7 +2,7 @@
   year=2018,
   language=english,
   imageFolder=./photos/,
-  eventsCsv = ./data/holidays.csv,
+  eventsCsv = ./data/events.csv,
   markDefaultsCsv = ./data/mark_defaults.csv,
 ]{wallcalendar}
 
@@ -11,17 +11,20 @@
 % https://ctan.org/pkg/wallcalendar
 % https://github.com/profound-labs/wallcalendar
 
+% Moon Phase data from Aeris Weather API
+% https://www.aerisweather.com/support/docs/api/
+
 \title{Wall Calendar}
 
 \usepackage{local}
 
 \begin{document}
 
-\MonthPage[layout=full page, put photo=full page]{June}
+\MonthPage[layout=small landscape, put photo=full width]{June}
 
 \MonthPage[layout=full page, put photo=full width above calendar]{July}
 
-\MonthPage[layout=small landscape, put photo=full width]{August}
+\MonthPage[layout=full page, put photo=full page]{August}
 
 \YearPlannerPage
 
