@@ -6,5 +6,5 @@ Open in Overleaf: https://www.overleaf.com/read/yyvqfsbsmssm
 
 See also `wallcalendar` package on Github: https://github.com/profound-labs/wallcalendar
 
-![Wallcalendar screenshot](./readme-assets/screenshot.jpg)
+![Wallcalendar August](./readme-assets/august.jpg)
 

@@ -1,62 +1,87 @@
 date;day_text;note
-2018-01-02;\FullMoon;
-2018-01-08;\LastQuarter;
-2018-01-17;\NewMoon;
-2018-01-24;\FirstQuarter;
-2018-01-31;\FullMoon;
-2018-02-07;\LastQuarter;
-2018-02-15;\NewMoon;
-2018-02-23;\FirstQuarter;
-2018-03-02;\FullMoon;
-2018-03-09;\LastQuarter;
-2018-03-17;\NewMoon;
-2018-03-24;\FirstQuarter;
-2018-03-31;\FullMoon;
-2018-04-08;\LastQuarter;
-2018-04-16;\NewMoon;
-2018-04-22;\FirstQuarter;
-2018-04-30;\FullMoon;
-2018-05-08;\LastQuarter;
-2018-05-15;\NewMoon;
-2018-05-22;\FirstQuarter;
-2018-05-29;\FullMoon;
-2018-06-06;\LastQuarter;
-2018-06-13;\NewMoon;
-2018-06-20;\FirstQuarter;
-2018-06-21;{\dejaVuSans\char"263C};Summer Solstice
-2018-06-28;\FullMoon;
-2018-07-06;\LastQuarter;
-2018-07-13;\NewMoon;
-2018-07-19;\FirstQuarter;
-2018-07-27;\FullMoon;Mars at Opposition
-2018-08-04;\LastQuarter;
-2018-08-11;\NewMoon;
-2018-08-12;{\dejaVuSans\char"263C};Perseids Meteor Shower
-2018-08-18;\FirstQuarter;
-2018-08-26;\FullMoon;
-2018-09-03;\LastQuarter;
-2018-09-09;\NewMoon;
-2018-09-10;G;Gandalf escapes from Orthanc
-2018-09-14;F;Frodo \& Bilbo's birthday
-2018-09-15;;Black riders enter the Shire
-2018-09-17;\FirstQuarter;
-2018-09-18;;Frodo and company rescued by Bombadil
-2018-09-25;;Full Moon
-2018-09-25;\FullMoon;
-2018-09-28;W;Wraith attack
-2018-10-02;\LastQuarter;
-2018-10-05;F;Frodo crosses bridge of Mitheithel
-2018-10-09;\NewMoon;
-2018-10-16;B;Boromir reaches Rivendell
-2018-10-16;\FirstQuarter;
-2018-10-17;E;Council of Elrond
-2018-10-24;\FullMoon;
-2018-10-31;\LastQuarter;
-2018-11-07;\NewMoon;
-2018-11-15;\FirstQuarter;
-2018-11-23;\FullMoon;
-2018-11-30;\LastQuarter;
-2018-12-07;\NewMoon;
-2018-12-15;\FirstQuarter;
-2018-12-22;\FullMoon;
-2018-12-29;\LastQuarter;
+2019-01-05;;Fellowship enters Moria
+2019-01-06;\NewMoon;
+2019-01-09;;Fellowship reaches Lorien
+2019-01-14;\FirstQuarter;
+2019-01-17;;Passing of Gandalf
+2019-01-21;\FullMoon;
+2019-01-27;\LastQuarter;
+2019-02-04;\NewMoon;
+2019-02-07;;Fellowship leaves Lorien
+2019-02-12;\FirstQuarter;
+2019-02-17;;Death of Boromir
+2019-02-19;\FullMoon;
+2019-02-20;;Meriadoc \& Pippin meet Treebeard
+2019-02-22;;Passing of King Ellesar
+2019-02-24;;Ents destroy Isengard
+2019-02-26;;Aragorn takes the Paths of the Dead
+2019-02-26;\LastQuarter;
+2019-03-05;;Frodo \& Samwise encounter Shelob
+2019-03-06;\NewMoon;
+2019-03-08;;Deaths of Denethor \& Theoden
+2019-03-14;\FirstQuarter;
+2019-03-18;;Destruction of the Ring
+2019-03-21;\FullMoon;
+2019-03-28;\LastQuarter;
+2019-03-29;;Flowering of the Mallorn
+2019-04-04;;Gandalf visits Bilbo
+2019-04-05;\NewMoon;
+2019-04-12;\FirstQuarter;
+2019-04-17;;An unexpected party
+2019-04-19;\FullMoon;
+2019-04-23;;Crowning of King Ellesar
+2019-04-26;\LastQuarter;
+2019-05-04;\NewMoon;
+2019-05-12;\FirstQuarter;
+2019-05-18;\FullMoon;
+2019-05-19;;Arwen leaves Lorian to wed King Ellesar
+2019-05-26;\LastQuarter;
+2019-06-03;\NewMoon;
+2019-06-10;\FirstQuarter;
+2019-06-11;;Sauron attacks Osgilliath
+2019-06-13;;Bilbo returns to Bag End
+2019-06-17;\FullMoon;
+2019-06-23;;Wedding of Ellesar \& Arwen
+2019-06-25;\LastQuarter;
+2019-07-02;\NewMoon;
+2019-07-04;;Gandalf imprisoned by Saruman
+2019-07-09;\FirstQuarter;
+2019-07-16;\FullMoon;
+2019-07-24;;The ring comes to Bilbo
+2019-07-25;\LastQuarter;
+2019-07-26;;Bilbo rescued from Wargs by Eagles
+2019-08-01;\NewMoon;
+2019-08-03;;Funeral of King Theoden
+2019-08-07;\FirstQuarter;
+2019-08-15;\FullMoon;
+2019-08-23;\LastQuarter;
+2019-08-29;;Saruman enters the Shire
+2019-08-30;\NewMoon;
+2019-09-06;\FirstQuarter;
+2019-09-10;G;Gandalf escapes from Orthanc
+2019-09-14;F;Frodo \& Bilbo's birthday
+2019-09-14;\FullMoon;
+2019-09-15;;Black riders enter the Shire
+2019-09-18;;Frodo and company rescued by Bombadil
+2019-09-22;\LastQuarter;
+2019-09-28;\NewMoon;
+2019-09-28;W;Wraith attack, Frodo wounded at Weathertop
+2019-10-05;F;Frodo crosses bridge of Mitheithel
+2019-10-05;\FirstQuarter;
+2019-10-13;\FullMoon;
+2019-10-16;B;Boromir reaches Rivendell
+2019-10-17;E;Council of Elrond
+2019-10-21;\LastQuarter;
+2019-10-25;;End of War of the Ring
+2019-10-28;\NewMoon;
+2019-11-04;\FirstQuarter;
+2019-11-12;\FullMoon;
+2019-11-16;B;Bilbo reaches the Lonely Mountain
+2019-11-19;\LastQuarter;
+2019-11-26;\NewMoon;
+2019-12-04;\FirstQuarter;
+2019-12-05;S;Death of Smaug
+2019-12-12;\FullMoon;
+2019-12-16;;Fellowship begins Quest
+2019-12-19;\LastQuarter;
+2019-12-26;\NewMoon;
