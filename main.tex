@@ -1,15 +1,19 @@
 \documentclass[
-  year=2019,
+  year=2018,
   language=english,
   imageFolder=./photos/,
-  eventsCsv = ./data/events.csv,
-  markDefaultsCsv = ./data/mark_defaults.csv,
 ]{wallcalendar}
 
 % See the wallcalendar user manual and repository
 %
 % https://ctan.org/pkg/wallcalendar
 % https://github.com/profound-labs/wallcalendar
+%
+% Check Settings > Compiler > Lualatex and recent TeX Live year
+%
+% In case of compile time out on Overleaf.com:
+% Re-compiling sometimes helps due to cached assets.
+% Comment out months and test with a single month only.
 
 \title{Wall Calendar}
 
@@ -17,12 +21,10 @@
 
 \begin{document}
 
-\MonthPage[layout=small landscape, put photo=full width]{June}
+\MonthPage[layout=full page, put photo=full page]{June}
 
 \MonthPage[layout=full page, put photo=full width above calendar]{July}
 
-\MonthPage[layout=full page, put photo=full page]{August}
-
-\YearPlannerPage
+\MonthPage[layout=small landscape, put photo=full width]{August}
 
 \end{document}

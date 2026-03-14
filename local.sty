@@ -3,40 +3,38 @@
 \setmainfont{TeX Gyre Pagella}
 \newfontfamily\dejaVuSans{DejaVu Sans}
 
-% === June ===
+\SetPhoto[bleed=3mm, file={obscure-crop}]{June}
 
-\SetPhoto[bleed=3mm, file={obscure-crop}, yOffset=-150mm]{June}
-
-\SetQuote[yOffset=-3mm]{June}{%
-\centering
+\SetQuote[xOffset=-5mm, yOffset=-20mm]{June}{%
+\raggedright
 \setlength{\parskip}{10pt}%
 \Large
-\color{black!80}
+\color{white}
 
+I shall set forth for somewhere,\\
+I shall make the reckless choice\\
+Some day when they are in voice\\
+And tossing so as to scare\\
+The white clouds over them on.\\
 I shall have less to say,\\
 But I shall be gone.
 
 \textit{The Sound of the Trees} by Robert Frost
 }
 
-\SetCalendar[bg/.style={opacity=1}]{June}
+\ifshowframe
+  \SetCalendar[bg/.style={opacity=0.5, fill=white}]{June}
+\else
+  \SetCalendar[bg/.style={opacity=0.8}]{June}
+\fi
 
 \SetEvents{June}{%
-\parseMonthMarksDayTextUsing{./data/events.csv}%
-\parseMonthMarksDayText%
-\parseMonthMarksNote%
+  if (equals=2018-06-21)
+    [day text={\dejaVuSans\char"263C}];% U+263C white sun with rays
 }{%
-\raggedright
-\parseMonthEvents[%
-  filter pred = hasNote,
-  format cmd = {
-    \textsuperscript{\eMark}~\eMonthShort~\eDay:\space%
-    \eNote\ifnumless{\eIdx}{\eMaxIdx}{,\space}{}%
-   },
-]%
+\raggedleft
+{\dejaVuSans\char"263C} June 21: Summer Solstice
 }
-
-% === July ===
 
 \SetPhoto[bleed=3mm, file={obscure-crop}]{July}
 
@@ -63,105 +61,42 @@ But I shall be gone.
 \end{tikzpicture}%
 }
 
-\SetCalendar[bg/.style={opacity=1}]{July}
+\ifshowframe
+  \SetCalendar[bg/.style={opacity=0.5}]{July}
+\else
+  \SetCalendar[bg/.style={opacity=1}]{July}
+\fi
 
-\SetEvents{July}{%
-\parseMonthMarksDayTextUsing{./data/events.csv}%
-\parseMonthMarksDayText%
-\parseMonthMarksNote%
+\SetEvents{July}{
+  if (equals=2018-07-27) [day text={\dejaVuSans\char"263C}];
 }{%
-\raggedright
-\parseMonthEvents[%
-  filter pred = hasNote,
-  format cmd = {
-    \textsuperscript{\eMark}~\eMonthShort~\eDay:\space%
-    \eNote\ifnumless{\eIdx}{\eMaxIdx}{,\space}{}%
-   },
-]%
+\raggedleft
+{\dejaVuSans\char"263C} July 27: Mars at Opposition
 }
 
-% === August ===
+\SetPhoto[bleed=3mm, file={obscure-crop}, yOffset=-150mm]{August}
 
-\SetPhoto[bleed=3mm, file={obscure-crop}]{August}
-
-\SetQuote[xOffset=-5mm, yOffset=-20mm]{August}{%
-\raggedright
+\SetQuote[yOffset=-3mm]{August}{%
+\centering
 \setlength{\parskip}{10pt}%
 \Large
-\color{white}
+\color{black!80}
 
-I shall set forth for somewhere,\\
-I shall make the reckless choice\\
-Some day when they are in voice\\
-And tossing so as to scare\\
-The white clouds over them on.\\
 I shall have less to say,\\
 But I shall be gone.
 
 \textit{The Sound of the Trees} by Robert Frost
 }
 
-\SetCalendar[bg/.style={opacity=0.8}]{August}
-
-\SetEvents{August}{%
-\parseMonthMarksDayTextUsing{./data/events.csv}%
-\parseMonthMarksDayText%
-\parseMonthMarksNote%
-}{%
-\raggedright
-\parseMonthEvents[%
-  filter pred = hasNote,
-  format cmd = {
-    \textsuperscript{\eMark}~\eMonthShort~\eDay:\space%
-    \eNote\ifnumless{\eIdx}{\eMaxIdx}{,\space}{}%
-   },
-]%
-}
-
-% === Year Planner ===
-
-\newcommand\plannerYearFmt{\fontsize{26}{26}\selectfont\color{orangegold}}
-
-\newlength\plannerNotesSep
-\setlength{\plannerNotesSep}{3mm}
-
-\newcommand\preYearPlannerPageHook{%
-  \renewcommand\monthMarkFmt{\fontsize{7}{7}\selectfont}%
-  \setlength{\markNumberAbove}{-9pt}%
-  \setlength{\markNumberRight}{-6pt}%
-  \setlength{\markDayTextAbove}{-11pt}%
-  \setlength{\markDayTextRight}{-6pt}%
-}
-
-\newcommand\postYearPlannerPageHook{%
-  \setlength{\markNumberAbove}{-10pt}%
-  \setlength{\markNumberRight}{-3pt}%
-  \setlength{\markDayTextAbove}{-10pt}%
-  \setlength{\markDayTextRight}{-3pt}%
-}
-
-\newcommand\printPlannerTitle{\plannerYearFmt \CalendarYear}
-
-\newcommand\YearPlannerPage{%
-\newpage
-\ifvarnishmask
-\mbox{}
+\ifshowframe
+  \SetCalendar[bg/.style={opacity=0.5}]{August}
 \else
-\preYearPlannerPageHook
-{\centering
-
-{\printPlannerTitle}
-
-\vspace*{7mm}
-
-\YearPlannerPortrait
-
-\vspace*{\plannerNotesSep}
-
-\plannerEvents
-
-}
-\postYearPlannerPageHook
-
+  \SetCalendar[bg/.style={opacity=1}]{August}
 \fi
+
+\SetEvents{August}{
+  if (equals=2018-08-12) [day text={\dejaVuSans\char"263C}];
+}{%
+\raggedleft
+{\dejaVuSans\char"263C} August 12, 13: Perseids Meteor Shower
 }
